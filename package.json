@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "Luke Hansford's ESLint confg for personal projects",
   "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "TODO:"
-  },
   "keywords": [
     "eslint",
     "eslintconfig",
