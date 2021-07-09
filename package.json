@@ -1,0 +1,31 @@
+{
+  "name": "eslint-config-lukehansford-base",
+  "version": "1.0.0",
+  "description": "Luke Hansford's ESLint confg for personal projects",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "TODO:"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "javascript",
+    "styleguide"
+  ],
+  "scripts": {
+    "lint": "eslint index.js"
+  },
+  "author": "Luke Hansford <mail@lukehansford.me> (https://lukehansford.me)",
+  "license": "ISC",
+  "peerDependencies": {
+    "eslint": "^7.30.0",
+    "prettier": "^2.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.3.2"
+  }
+}
