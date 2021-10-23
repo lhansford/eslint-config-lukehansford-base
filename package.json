@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-lukehansford-base",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Luke Hansford's ESLint confg for personal projects",
   "main": "index.js",
   "repository": {

@@ -15,7 +15,10 @@ module.exports = {
       'error',
       { varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
     ],
-    'curly': 'error',
+    curly: 'error',
+    'import/first': 'error',
+    'import/order': ['error', { 'newlines-between': 'always' }],
     'no-alert': 'error',
+    semi: 'error',
   },
 };
