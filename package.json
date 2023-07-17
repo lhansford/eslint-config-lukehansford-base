@@ -20,7 +20,7 @@
   "author": "Luke Hansford <mail@lukehansford.me> (https://lukehansford.me)",
   "license": "ISC",
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
     "@typescript-eslint/parser": "^5.49.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-import": "^2.27.5",
