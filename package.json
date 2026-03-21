@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-lukehansford-base",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Luke Hansford's ESLint confg for personal projects",
   "main": "index.js",
   "type": "module",
@@ -21,12 +21,12 @@
   "author": "Luke Hansford <mail@lukehansford.me> (https://lukehansford.me)",
   "license": "ISC",
   "dependencies": {
-    "@eslint/js": "^9.28.0",
-    "eslint": "^9.28.0",
+    "@eslint/js": "^10.0.0",
+    "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-import-x": "^4.16.0",
     "prettier": "^3.5.3",
-    "typescript-eslint": "^8.34.0"
+    "typescript-eslint": "^8.57.0"
   },
   "peerDependencies": {
     "typescript": "^5.8.3"
