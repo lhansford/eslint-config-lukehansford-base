@@ -18,7 +18,6 @@ There is **no test suite**. The `lint` script is the sole CI check.
 ```
 index.js          — Main config export (ESLint flat config using typescript-eslint)
 eslint.config.js  — Local ESLint config (imports from index.js, used for self-linting)
-.eslintrc         — Legacy ESLint config (extends index.js)
 package.json      — Package manifest (type: module, ESM only)
 .prettierrc       — Prettier settings (singleQuote, trailingComma: all, printWidth: 100)
 .nvmrc            — Node version: 22
@@ -49,7 +48,6 @@ A new release is created automatically when a commit is pushed to `main` with an
 
 ## Gotchas
 
-- The `.eslintrc` file is a legacy artifact — the real config is `eslint.config.js` (flat config format).
 - `eslint.config.js` just re-exports `index.js` — all config logic lives in `index.js`.
 - No tests exist. Linting `index.js` against itself is the only validation.
 - The `eslint-plugin-import` rules only apply to `**/*.{ts,tsx}` files, not plain JS.
