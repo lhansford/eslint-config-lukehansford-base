@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-lukehansford-base",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Luke Hansford's ESLint confg for personal projects",
   "main": "index.js",
   "type": "module",
@@ -25,6 +25,8 @@
     "eslint": "10.1.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-import-x": "4.16.2",
+    "eslint-plugin-unicorn": "63.0.0",
+    "globals": "17.4.0",
     "prettier": "3.8.1",
     "typescript-eslint": "8.57.1"
   },
@@ -32,7 +34,6 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "eslint-plugin-unicorn": "^63.0.0",
     "typescript": "^5.9.3"
   }
 }
