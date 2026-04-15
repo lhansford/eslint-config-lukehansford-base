@@ -14,6 +14,11 @@ export default defineConfig(
   {
     files: ['**/*.{ts,tsx}'],
     extends: [importPlugin.flatConfigs.recommended],
+    settings: {
+      'import-x/resolver': {
+        typescript: true,
+      },
+    },
   },
   {
     languageOptions: {
