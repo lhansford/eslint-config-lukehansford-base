@@ -1,13 +1,15 @@
 {
   "name": "eslint-config-lukehansford-base",
-  "version": "3.2.1",
-  "description": "Luke Hansford's ESLint confg for personal projects",
+  "version": "3.3.0",
+  "description": "Luke Hansford's ESLint config for personal projects",
   "main": "index.js",
   "type": "module",
   "exports": {
     ".": "./index.js",
     "./vitest": "./vitest.js",
-    "./svelte": "./svelte.js"
+    "./svelte": "./svelte.js",
+    "./prettier": "./prettier.js",
+    "./prettier-svelte": "./prettier-svelte.js"
   },
   "repository": {
     "type": "git",
@@ -21,27 +23,45 @@
     "styleguide"
   ],
   "scripts": {
-    "lint": "eslint index.js vitest.js svelte.js"
+    "lint": "eslint index.js vitest.js svelte.js prettier.js prettier-svelte.js"
   },
   "author": "Luke Hansford <mail@lukehansford.me> (https://lukehansford.me)",
   "license": "ISC",
+  "files": [
+    "index.js",
+    "vitest.js",
+    "svelte.js",
+    "prettier.js",
+    "prettier-svelte.js"
+  ],
   "dependencies": {
     "@eslint/js": "10.0.1",
-    "@vitest/eslint-plugin": "^1.6.15",
+
     "eslint": "10.2.0",
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import-x": "4.16.2",
-    "eslint-plugin-svelte": "3.17.0",
+
     "eslint-plugin-unicorn": "64.0.0",
     "globals": "17.5.0",
     "prettier": "3.8.3",
     "typescript-eslint": "8.58.2"
   },
   "peerDependencies": {
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "@vitest/eslint-plugin": "^1.6.15",
+    "eslint-plugin-svelte": "3.17.0",
+    "prettier-plugin-svelte": "3.5.1"
+  },
+  "peerDependenciesMeta": {
+    "@vitest/eslint-plugin": { "optional": true },
+    "eslint-plugin-svelte": { "optional": true },
+    "prettier-plugin-svelte": { "optional": true }
   },
   "devDependencies": {
-    "typescript": "^6.0.2"
+    "typescript": "^6.0.2",
+    "@vitest/eslint-plugin": "^1.6.15",
+    "eslint-plugin-svelte": "3.17.0",
+    "prettier-plugin-svelte": "3.5.1"
   }
 }
