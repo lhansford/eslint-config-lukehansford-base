@@ -9,7 +9,7 @@ Shared ESLint configuration package (`eslint-config-lukehansford-base`) for pers
 | Command | Description |
 |---------|-------------|
 | `npm install` | Install dependencies |
-| `npm run lint` | Lint `index.js` with ESLint (the only validation — no tests) |
+| `npm run lint` | Lint `index.js` and `vitest.js` with ESLint (the only validation — no tests) |
 
 There is **no test suite**. The `lint` script is the sole CI check.
 
@@ -17,6 +17,7 @@ There is **no test suite**. The `lint` script is the sole CI check.
 
 ```
 index.js          — Main config export (ESLint flat config using typescript-eslint)
+vitest.js         — Vitest-specific ESLint config (imported separately via "eslint-config-lukehansford-base/vitest")
 eslint.config.js  — Local ESLint config (imports from index.js, used for self-linting)
 package.json      — Package manifest (type: module, ESM only)
 .prettierrc       — Prettier settings (singleQuote, trailingComma: all, printWidth: 100)
@@ -28,6 +29,8 @@ package.json      — Package manifest (type: module, ESM only)
 - **ESM module** — `"type": "module"` in package.json; use `import`/`export`, not `require`.
 - **ESLint 9 flat config** — Uses `tseslint.config()` composition pattern, not legacy `.eslintrc` extends.
 - **Config composition** — Combines `@eslint/js` recommended, `typescript-eslint` recommended, `eslint-config-prettier`, and `eslint-plugin-import` (for `.ts`/`.tsx` files only).
+- **Vitest config** — Separate export (`./vitest`) using `@vitest/eslint-plugin`. Applies to test files (`*.test.*`, `*.spec.*`, `__tests__/**`). Enforces `vitest/recommended` rules plus capitalised test titles, `describe` function titles, and `it` over `test`.
+- **Package exports** — Uses `exports` field to expose `"."` (main config) and `"./vitest"` (vitest config) as separate entry points.
 - **Peer dependency** — TypeScript 5.x is a peer dependency; consumers must install it.
 
 ## Code Style
@@ -51,3 +54,4 @@ A new release is created automatically when a commit is pushed to `main` with an
 - `eslint.config.js` just re-exports `index.js` — all config logic lives in `index.js`.
 - No tests exist. Linting `index.js` against itself is the only validation.
 - The `eslint-plugin-import` rules only apply to `**/*.{ts,tsx}` files, not plain JS.
+- `vitest.js` is a standalone config — it is not included in the main `index.js` export. Consumers must import it separately (e.g., `import vitest from 'eslint-config-lukehansford-base/vitest'`).
