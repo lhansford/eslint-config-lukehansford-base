@@ -17,8 +17,8 @@ export default defineConfig({
       {
         allowArguments: true,
         mustMatch: {
-          describe: ['^[A-Z]'],
-          it: ['^[A-Z]'],
+          describe: ['^[A-Z.]'],
+          it: ['^[A-Z.]'],
         },
       },
     ],
