@@ -28,6 +28,7 @@ export default defineConfig(
       unicorn: eslintPluginUnicorn,
     },
     rules: {
+      curly: 'error',
       'unicorn/filename-case': [
         'error',
         {
