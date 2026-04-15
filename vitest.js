@@ -15,6 +15,7 @@ export default defineConfig({
     'vitest/valid-title': [
       'error',
       {
+        allowArguments: true,
         mustMatch: {
           describe: ['^[A-Z]'],
           it: ['^[A-Z]'],

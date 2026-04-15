@@ -1,12 +1,13 @@
 {
   "name": "eslint-config-lukehansford-base",
-  "version": "3.1.2",
+  "version": "3.2.0",
   "description": "Luke Hansford's ESLint confg for personal projects",
   "main": "index.js",
   "type": "module",
   "exports": {
     ".": "./index.js",
-    "./vitest": "./vitest.js"
+    "./vitest": "./vitest.js",
+    "./svelte": "./svelte.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
     "styleguide"
   ],
   "scripts": {
-    "lint": "eslint index.js vitest.js"
+    "lint": "eslint index.js vitest.js svelte.js"
   },
   "author": "Luke Hansford <mail@lukehansford.me> (https://lukehansford.me)",
   "license": "ISC",
@@ -31,6 +32,7 @@
     "eslint-config-prettier": "10.1.8",
     "eslint-import-resolver-typescript": "4.4.4",
     "eslint-plugin-import-x": "4.16.2",
+    "eslint-plugin-svelte": "3.17.0",
     "eslint-plugin-unicorn": "64.0.0",
     "globals": "17.5.0",
     "prettier": "3.8.3",

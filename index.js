@@ -22,7 +22,7 @@ export default defineConfig(
   },
   {
     languageOptions: {
-      globals: globals.builtin,
+      globals: { ...globals.nodeBuiltin, ...globals.browser },
     },
     plugins: {
       unicorn: eslintPluginUnicorn,
